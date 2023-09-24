@@ -12,12 +12,13 @@ export class ListComponent {
   public charactersList: CharacterInterface[] = []
 
   @Output()
-  public onDeleteEmitCharacter: EventEmitter<number> = new EventEmitter()
+  public onDeleteEmitCharacter: EventEmitter<string> = new EventEmitter()
 
 
 
-  onDeleteCharacter(i: number): void {
-    this.onDeleteEmitCharacter.emit(i)
+  onDeleteCharacter(id?:string): void {
+    if(!id) return
+    this.onDeleteEmitCharacter.emit(id)
   }
 
 }

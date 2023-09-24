@@ -2,11 +2,11 @@
   <div class="row pt-3">
     <div class="col">
       <dbz-list
-      [charactersList]="dbzService.characters"
-      (onDeleteEmitCharacter)="dbzService.onDeleteCharacter($event)"></dbz-list>
+      [charactersList]="characters"
+      (onDeleteEmitCharacter)="onDeleteCharacter($event)"></dbz-list>
     </div>
     <div class="col">
-      <dbz-add-characters (onNewEmitCharacter)="dbzService.onNewCharacter($event)"></dbz-add-characters>
+      <dbz-add-characters (onNewEmitCharacter)="onNewCharacter($event)"></dbz-add-characters>
     </div>
   </div>
 </div>
